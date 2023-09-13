@@ -1,3 +1,9 @@
+.appCover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .compCoverTaskCreate {
   display: flex;
   flex-direction: column;
@@ -37,4 +43,48 @@
 .buttonClass:hover {
   background-color: rgb(55, 147, 116);
   transition: 1s;
+}
+
+.coverTaskList{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.coverTaskShow{
+  border: 1px solid green;
+  border-radius: 15px;
+  width: 350px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btnDiv{
+  display: flex;
+}
+
+.btnDelete{
+   border: none;
+   margin-left: 5px;
+   margin-right: 5px;
+   background-color: red;
+   color: white;
+   border-radius: 10px;
+   padding: 5px;
+   padding-right: 15px;
+   padding-left: 15px;
+}
+.btnUpdate{
+   border: none;
+   margin-left: 5px;
+   margin-right: 5px;
+   background-color: forestgreen;
+   color: white;
+   border-radius: 10px;
+   padding: 5px;
+   padding-right: 15px;
+   padding-left: 15px;
 }

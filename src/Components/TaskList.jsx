@@ -1,9 +1,9 @@
-import TaskShow from "./TskShow";
+import TaskShow from "./TaskShow";
 
 function TaskList({ tasks }) {
     return (
-        <div>
-            {tasks.map((task,index) => {
+        <div className="coverTaskList">
+            {tasks.map((task, index) => {
                 return (
                     <TaskShow key={index} task={task} />
                 )

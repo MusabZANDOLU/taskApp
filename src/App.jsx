@@ -16,11 +16,11 @@ function App() {
     setTasks(createdTasks)
   }
   return (
-    <>
+    <div className='appCover'>
       <TaskCreate onCreate={createTask} />
       <h1>Görevler</h1>
       <TaskList tasks={tasks} />
-    </>
+    </div>
   );
 }
 
