@@ -45,13 +45,13 @@
   transition: 1s;
 }
 
-.coverTaskList{
+.coverTaskList {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.coverTaskShow{
+.coverTaskShow {
   border: 1px solid green;
   border-radius: 15px;
   width: 350px;
@@ -62,29 +62,46 @@
   align-items: center;
 }
 
-.btnDiv{
+.btnDiv {
   display: flex;
 }
 
-.btnDelete{
-   border: none;
-   margin-left: 5px;
-   margin-right: 5px;
-   background-color: red;
-   color: white;
-   border-radius: 10px;
-   padding: 5px;
-   padding-right: 15px;
-   padding-left: 15px;
+.btnDelete {
+  border: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
-.btnUpdate{
-   border: none;
-   margin-left: 5px;
-   margin-right: 5px;
-   background-color: forestgreen;
-   color: white;
-   border-radius: 10px;
-   padding: 5px;
-   padding-right: 15px;
-   padding-left: 15px;
+.btnUpdate {
+  border: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: forestgreen;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.compCoverTaskUpdate {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.formCoverTaskUpdate {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.updateButton {
+  background-color: blueviolet;
 }

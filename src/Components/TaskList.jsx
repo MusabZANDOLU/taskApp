@@ -1,15 +1,20 @@
 import TaskShow from "./TaskShow";
 
-function TaskList({ tasks }) {
-    return (
-        <div className="coverTaskList">
-            {tasks.map((task, index) => {
-                return (
-                    <TaskShow key={index} task={task} />
-                )
-            })}
-        </div>
-    );
+function TaskList({ tasks, onDelete, onUpdate }) {
+  return (
+    <div className="coverTaskList">
+      {tasks.map((task, index) => {
+        return (
+          <TaskShow
+            key={index}
+            task={task}
+            onDelete={onDelete}
+            onUpdate={onUpdate}
+          />
+        );
+      })}
+    </div>
+  );
 }
 
 export default TaskList;
