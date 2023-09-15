@@ -21,11 +21,11 @@ function TaskShow({ task, onDelete, onUpdate }) {
       {showEdit ? (
         <TaskCreate task={task} taskFormUpdate={true} onUpdate={handleSubmit} />
       ) : (
-        <div>
-          <h3>Göreviniz</h3>
-          <p>{task.title}</p>
-          <h3>Yapılacaklar</h3>
-          <p>{task.taskDescr}</p>
+        <>
+          <div className="taskShowTitle">Göreviniz</div>
+          <div>{task.title}</div>
+          <div className="taskShowTitle">Yapılacaklar</div>
+          <div>{task.taskDescr}</div>
           <div className="btnDiv">
             <button className="btnDelete" onClick={handleDeleleteClick}>
               Sil
@@ -34,7 +34,7 @@ function TaskShow({ task, onDelete, onUpdate }) {
               Güncelle
             </button>
           </div>
-        </div>
+        </>
       )}
     </div>
   );

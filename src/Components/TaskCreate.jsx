@@ -3,6 +3,7 @@ import { useState } from "react";
 function TaskCreate({ onCreate, task, taskFormUpdate, onUpdate }) {
   const [title, setTitle] = useState(task ? task.title : "");
   const [taskDescr, setTaskDescr] = useState(task ? task.taskDescr : "");
+  const [placeHolder, setPlaceHolder] = useState(false);
 
   const handleChange = (e) => {
     setTitle(e.target.value);
@@ -14,13 +15,18 @@ function TaskCreate({ onCreate, task, taskFormUpdate, onUpdate }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (taskFormUpdate) {
-      onUpdate(task.id, title, taskDescr);
+    if (title.length <= 0 && taskDescr <= 0) {
+      setPlaceHolder(true);
     } else {
-      onCreate(title, taskDescr);
+      if (taskFormUpdate) {
+        onUpdate(task.id, title, taskDescr);
+      } else {
+        onCreate(title, taskDescr);
+        setPlaceHolder(false);
+      }
+      setTitle("");
+      setTaskDescr("");
     }
-    setTitle(" ");
-    setTaskDescr(" ");
   };
 
   return (
@@ -42,7 +48,7 @@ function TaskCreate({ onCreate, task, taskFormUpdate, onUpdate }) {
               value={taskDescr}
             />
             <button className="buttonClass updateButton" onClick={handleSubmit}>
-              Düzenle
+              Tamamla
             </button>
           </form>
         </div>
@@ -55,12 +61,20 @@ function TaskCreate({ onCreate, task, taskFormUpdate, onUpdate }) {
               className="inputClass"
               onChange={handleChange}
               value={title}
+              placeholder={
+                placeHolder
+                  ? "Başlık Bilgisi Doldurulmalıdır!"
+                  : "Başlık Giriniz"
+              }
             />
             <div>Task Giriniz</div>
             <textarea
               className="textAreaClass"
               onChange={handleTaskChange}
               value={taskDescr}
+              placeholder={
+                placeHolder ? "Task Bilgisi Doldurulmalıdır!" : "Task Giriniz"
+              }
             />
             <button className="buttonClass" onClick={handleSubmit}>
               Oluştur

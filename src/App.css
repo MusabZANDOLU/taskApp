@@ -22,6 +22,9 @@
   margin-bottom: 10px;
   height: 30px;
   border-radius: 10px;
+  border: none;
+  background-color: beige;
+  padding: 5px;
 }
 
 .textAreaClass {
@@ -30,6 +33,9 @@
   margin-bottom: 10px;
   margin-top: 10px;
   resize: none;
+  border: none;
+  background-color: beige;
+  padding: 5px;
 }
 
 .buttonClass {
@@ -52,18 +58,20 @@
 }
 
 .coverTaskShow {
-  border: 1px solid green;
   border-radius: 15px;
+  margin: 10px;
   width: 350px;
   padding: 10px;
-  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: bisque;
+  height: 200px;
 }
 
 .btnDiv {
   display: flex;
+  margin: 5px;
 }
 
 .btnDelete {
@@ -104,4 +112,9 @@
 
 .updateButton {
   background-color: blueviolet;
+}
+
+.taskShowTitle{
+  font-size: large;
+  font-weight: bold;
 }
